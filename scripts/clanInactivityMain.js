@@ -13,6 +13,7 @@ moment.locale("en-au");
 function searchClan() {
   if (searching) {
     console.log("already searching");
+    searching = false;
     return false;
   }
   searching = true;
