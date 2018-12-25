@@ -19,6 +19,7 @@ function searchClan() {
   var clanID = document.getElementById("clanInput").value.trim();
   if (!clanID.length) {
     alert("Enter a clan name");
+    searching = false;
     return false;
   }
   $("#memberList").addClass("hidden");
@@ -32,10 +33,13 @@ function searchClan() {
     console.log(json.Response);
     if (!json.Response) {
       console.log(json.Message);
+      alert("Could not connect to the bungie servers.");
+      searching = false;
       return false;
     }
     if (json.Response.length < 1) {
       alert("No clan was found");
+      searching = false;
       return false;
     }
     memberCount = json.Response.results.length;
