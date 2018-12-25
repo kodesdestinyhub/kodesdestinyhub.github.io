@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Destiny 2 Clan Inactivity Tool</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="/">Kodes Destiny Hub</a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="/">Home</a></li>
+          <li class="dropdown active">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Destiny 2 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li class="active"><a href="">Clan Inactivity Tool<span class="sr-only">(current)</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="page-header">
+    <h1>Destiny 2 Clan Inactivity Tool</h1>
+  </div>
+  <h3>This tool lists all clan members (up to 100) using the clan id and displays the last time they logged in. Members that have not logged in over 30 days or played less than one minute in their last session will appear red. <strong>I AM NOT TO BE HELD ACCOUNTABLE FOR WHAT IS DONE WITH THIS INFORMATION. IT MAY NOT BE CORRECT. ALWAYS DOUBLE CHECK ON THE OFFICIAL BUNGIE.NET SITE BEFORE REMOVING MEMBERS</strong></h3>
+  <div class="input-group">
+    <input type="checkbox" id="onlyShowRed">
+    <label for="onlyShowRed">Only show red clan members</label>
+  </div>
+  <div class="input-group">
+    <input type="text" class="form-control" id="clanInput" placeholder="Clan ID">
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="button" onclick="searchClan()">Search for Clan</button>
+    </span>
+  </div>
+  <h2 id="memberListProgress" class="hidden text-center"></h2>
+  <table id="memberList" class="table table-hover table-striped hidden">
+    <thead>
+      <tr>
+        <th data-sort="string">Display Name</th>
+        <th data-sort="int">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="scripts/stupidtable.min.js"></script>
+  <script src="scripts/moment-with-locales.js"></script>
+  <script src="scripts/clanInactivityMain.js"></script>
+</body>
+
+</html>
